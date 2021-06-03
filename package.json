@@ -1,0 +1,21 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "An app for taking notes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relentlessreed/week11.git"
+  },
+  "author": "Edward Reed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/relentlessreed/week11/issues"
+  },
+  "homepage": "https://github.com/relentlessreed/week11#readme"
+}
