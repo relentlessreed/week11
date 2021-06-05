@@ -1,5 +1,5 @@
 # Note Taker  ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)  
-![Screenshot](./assets/notetaker.png)  
+![Screenshot](./Assets/notetaker.png)  
 [Link to Deployable Application](https://ejr-note-taker.herokuapp.com/notes)
 # Description
 An app designed to help you take notes and keep track of things!
