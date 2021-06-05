@@ -1,6 +1,6 @@
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
-const notesDb = require('../Develop/db/db.json');
+let notesDb = require('../Develop/db/db.json');
 const fs = require('fs');
 const uniqid = require ('uniqid');
 // ROUTING
@@ -25,5 +25,17 @@ module.exports = (app) => {
     notesDb.push(newNote)
     res.end()
   });
+
+  // Delete Note Functionality
+  app.delete('/api/notes/:id', (req, res) => {
+	const noteToDelete = req.params.id;
+  notesDb = notesDb.filter(note => note.id !== noteToDelete)
+    fs.writeFile('./Develop/db/db.json', JSON.stringify(notesDb), (err) => {
+        if (err) {
+            console.error(err)
+        }
+    })
+	res.end();
+});
 
 };
