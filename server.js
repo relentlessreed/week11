@@ -4,10 +4,11 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Our Middleware
+app.use(express.static("Develop/public"))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require("./routes/apiRoutes")(app);
+// require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, function () {
