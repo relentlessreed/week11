@@ -19,7 +19,11 @@ module.exports = (app) => {
   app.post('/api/notes', (req, res) => {
     //  Our "server" will create and add information to our database file
     const newNote = req.body
-    console.log(newNote)
+    // Assigns unique Id to our note
+    newNote.id = uniqid()
+    // Sending our new note to database
+    notesDb.push(newNote)
+    res.end()
   });
 
 };
